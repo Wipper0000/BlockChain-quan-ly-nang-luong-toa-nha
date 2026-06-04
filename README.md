@@ -5,7 +5,7 @@
     </a>
 </h2>
 <h2 align="center">
-   TRUYỀN FILE QUA GIAO THỨC TCP
+   Ứng dụng BlockChain trong quản lý năng lượng tòa nhà
 </h2>
 <div align="center">
     <p align="center">
