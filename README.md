@@ -244,7 +244,7 @@ Nạp chương trình vào mạch:
 
 🔗 Kết nối Blockchain
 Khởi chạy Ganache Local Blockchain
-<img src="Screenshot 2026-06-05 041328.png" width="850"/>
+<img src="ganache.png" width="850"/>
 Khởi động phần mềm Ganache trên máy tính và thiết lập cấu hình mạng:
 
 RPC Server Endpoint:
