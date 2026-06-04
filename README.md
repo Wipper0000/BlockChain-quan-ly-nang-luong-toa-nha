@@ -280,8 +280,11 @@ RPC Server Endpoint:
    
      +Trên Web Dashboard xuất hiện thêm một hàng mã giao dịch TxHash duy nhất trong bảng nhật ký. Khi trạng thái được reload (F5), bảng dữ liệu này sẽ quét ngược      cấu trúc Block từ Ganache về để tái tạo dữ liệu hiển thị, bảo đảm thông tin lịch sử an toàn tuyệt đối.
 
+   📷 Hình ảnh minh họa:
+   <img src="demo.png" width="850"/>
+
 👨‍💻 Người thực hiện
-Lê Ngọc 
+Lê Ngọc Hưng
 
 Chuyên ngành: Công nghệ Thông tin
 
