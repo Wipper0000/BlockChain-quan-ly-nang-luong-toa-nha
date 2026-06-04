@@ -1,18 +1,20 @@
-
 <h2 align="center">
     <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
     🎓 Faculty of Information Technology (DaiNam University)
     </a>
 </h2>
+
 <h2 align="center">
-   Ứng dụng BlockChain trong quản lý năng lượng tòa nhà
+GIÁM SÁT NĂNG LƯỢNG VÀ SA THẢI PHỤ TẢI TOÀ NHÀ THÔNG MINH BẰNG BLOCKCHAIN
 </h2>
+
 <div align="center">
-    <p align="center">
-        <img src="docs/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
-        <img src="docs/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
-        <img src="docs/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
-    </p>
+
+<p align="center">
+<img src="./aiotlab_logo.png" width="170"/>
+<img src="./fitdnu_logo.png" width="180"/>
+<img src="./dnu_logo.png" width="200"/>
+</p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
 [![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
@@ -20,125 +22,110 @@
 
 </div>
 
-## 📖 1. Giới thiệu
-Trong thời đại công nghệ thông tin phát triển mạnh mẽ, nhu cầu trao đổi và chia sẻ dữ liệu giữa các máy tính ngày càng phổ biến. Một trong những phương thức quan trọng và được sử dụng rộng rãi là truyền file qua giao thức TCP (Transmission Control Protocol).
+---
 
-TCP là giao thức hướng kết nối, đảm bảo tính tin cậy, toàn vẹn và đúng thứ tự dữ liệu trong quá trình truyền. Nhờ đó, việc truyền file qua TCP có thể áp dụng cho nhiều hệ thống thực tế như: dịch vụ FTP, ứng dụng chat, hệ thống lưu trữ dữ liệu phân tán, hay các phần mềm hỗ trợ tải xuống.
+## 📌 Poster dự án
 
-🔑 **Các chức năng chính của hệ thống**:
-
--Kết nối Client – Server qua TCP Socket.
-
--Truyền và nhận file giữa các client.
-
--Hiển thị tiến trình truyền và nhận file .
-
--Lưu file tự động vào thư mục chỉ định.
-
-## 🛠️ 2. Công nghệ sử dụng
-
-**Ngôn ngữ lập trình**: Java
-
-**Giao thức**: TCP,TCP Socket
-
-**Công nghệ giao diện**: Java Swing
-
-**Thư viện**:
-
--java.net 
-
--java.io 
-
-**Công cụ phát triển**: Eclipse IDE
-
-**Hệ điều hành**: Windows 11
-
-**JDK**: Java SE
-
-
-## 🚀 3. Hình ảnh các chức năng
-
-
-<p align="center">
-  <img src="docs/Ảnh 1.png" alt="Ảnh 1" width="500"/>
-</p>
-<p align="center">
-  <em>Hình 1: Giao diện nhập tên user </em>
-</p>
-
-
-<p align="center">
-  <img src="docs/Ảnh 3.png" alt="Ảnh 3" width="500"/>
-</p>
-<p align="center">
-  <em>Hình 2: Giao diện chọn file để gửi </em>
-</p>
-
-
-<p align="center">
-  <img src="docs/Ảnh 4.png" alt="Ảnh 4" width="500"/>
-</p>
-<p align="center">
-  <em>Hình 3: Giao diện Client sau khi chọn  </em>
-</p>
-
-
-<p align="center">
-  <img src="docs/Ảnh 5.png" alt="Ảnh 5" width="500"/>
-</p>
-<p align="center">
-  <em>Hình 4: Giao diện Khi File gửi thành công  </em>
-</p>
-
-
-<p align="center">
-  <img src="docs/Ảnh 6.png" alt="Ảnh 6" width="500"/>
-</p>
-<p align="center">
-  <em>Hình 5: Giao diện Client user khác truy cập server sau khi user 1 chuyển file</em>
-</p>
-
-## 📝 4. Các bước cài đặt
-
-#### Bước 1: Chuẩn bị môi trường
-1. **Kiểm tra Java**: Mở terminal/command prompt và chạy:
-   ```bash
-   java -version
-   javac -version
-   ```
-   Đảm bảo cả hai lệnh đều hiển thị phiên bản Java 8 trở lên.
-
-2. **Tải mã nguồn**: Sao chép thư mục `Truyen-file-qua-tcp` chứa các file:
-   - `FileServer.java`
-   - `ChatClient.java`
-
-#### Bước 2: Biên dịch mã nguồn
-1.Chạy server:
-```bash
-java component.FileServer
-```
-
-2.Chạy Client:
-```bash
-java component.ChatClient
-```
-<p></p>
-
-### 🚀 Sử dụng ứng dụng
-
-1. **Kết nối server**: chạy Server.java để lắng nghe trên port (ví dụ 5001).
-2. **Kết nối Client**: chạy Client.java và nhập IP, port server để kết nối.
-3. **Chọn File**: client chọn file cần gửi từ máy tính.
-4. **Gửi File**: client gửi file qua socket TCP tới server.
-5. **Nhận File**: server nhận dữ liệu và ghi file vào thư mục đích.
-6. **Lưu File**: file được lưu tự động trong thư mục mặc định của server.
-7. **Ngắt kết nối**:client thoát ứng dụng hoặc nhấn Ctrl+C để dừng.
-
-## 👤 5. Liên hệ
-**Họ tên**: Lê Ngọc Hưng.  
-**Lớp**: CNTT 16-01.  
-**Email**: Hungtit0601@gmail.com.
-
-© 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+<div align="center">
+<img src="./Poster_Blockchain_Energy.JPG" width="850"/>
+</div>
 
 ---
+
+# 📖 Giới thiệu đề tài
+
+**Giám sát năng lượng và sa thải phụ tải tòa nhà thông minh bằng Blockchain** là hệ thống kết hợp giữa **Internet vạn vật (IoT)** và **Blockchain Ethereum** nhằm xây dựng một nền tảng quản lý, giám sát công suất tiêu thụ điện năng thời gian thực và tự động điều phối an toàn lưới điện nội bộ một cách minh bạch, bất biến.
+
+Hệ thống sử dụng cảm biến dòng điện để thu thập thông số, áp dụng vi điều khiển ESP8266 để tính toán toán học và điều khiển cơ cấu chấp hành ngắt tải phụ khi có sự cố. Toàn bộ dữ liệu biến động và nhật ký quá tải sẽ được mã hóa hóa và đóng gói trực tiếp vào sổ cái của mạng Blockchain thông qua thư viện Web3.js, triệt tiêu hoàn toàn rủi ro can thiệp hay xóa sửa dữ liệu thủ công.
+
+🎯 **Mục tiêu của hệ thống**
+
+* Giám sát liên tục và tính toán công suất tiêu thụ điện năng theo thời gian thực.
+* Tự động kích hoạt cơ chế sa thải phụ tải (Load Shedding) bảo vệ hệ thống khi vượt ngưỡng an toàn.
+* Phát tín hiệu cảnh báo khẩn cấp đa kênh (Mail thông báo qua giao thức mã hóa bảo mật SSL).
+* Lưu trữ nhật ký biến động công suất và sự cố lên mạng lưới Blockchain Ethereum cục bộ.
+* Triển khai cơ chế khôi phục trạng thái (Reverse Scan) từ chuỗi khối, chứng minh tính toàn vẹn dữ liệu.
+
+---
+
+# ⚙️ Tính năng nổi bật
+
+* 📊 Realtime Energy Stream (Cập nhật liên tục thông số dòng điện và công suất).
+* 📈 Biểu đồ trực quan hóa dữ liệu real-time với Chart.js (Hỗ trợ dải đo lên tới 2000W).
+* ⚡ Sa thải phụ tải chủ động bằng phần cứng khi công suất vượt ngưỡng giới hạn (>150W).
+* 📬 Hệ thống Email Alert tự động kích hoạt thông qua SMTP qua SSL (Cổng 465) đến ban quản lý.
+* 🔒 Bảo mật và ký số giao dịch sử dụng cặp khóa mã hóa (Private Key/Public Key).
+* ⛓️ Mã hóa thông tin sự cố sang mã Hex và ghi dữ liệu lên Local Blockchain Ganache/Ethereum.
+* 🔄 Cơ chế quét ngược dữ liệu (Reverse Scanning) từ các khối cũ về giao diện khi tải lại trang (F5).
+* 🤖 Hỗ trợ điều khiển cơ cấu chấp hành động cơ bước thông qua mạch Driver ngoại vi.
+* 🖥️ Web Dashboard được thiết kế theo phong cách tối mờ chuyên nghiệp (Dark Mode UI).
+
+---
+
+# 🖥️ Kiến trúc hệ thống
+
+## 🎨 Giao diện người dùng (UI)
+
+* Dashboard Dark Mode.
+* Glassmorphism Design.
+* Hiển thị biểu đồ sóng dòng điện realtime.
+* Bảng lịch sử sổ cái (Ledger Table).
+* Trạng thái kết nối Blockchain.
+
+## 🔌 Tầng thiết bị IoT
+
+* NodeMCU ESP8266.
+* Cảm biến dòng điện ACS712.
+* Thu thập dữ liệu Analog đầu vào.
+* Xử lý thuật toán ngắt tải tầng phụ.
+
+## 📬 Tầng truyền thông & Cảnh báo
+
+* Giao thức truyền tải HTTP JSON.
+* API Endpoint cục bộ (`/data`).
+* Mail Client kết nối SMTP Server Google.
+
+## ⛓️ Tầng chuỗi khối bất biến
+
+* Mạng Ethereum cục bộ (Ganache).
+* Thư viện kết nối Web3.js (v1.8.1).
+* Quản lý giao dịch và mã băm định danh (TxHash).
+
+## 🦾 Tầng cơ cấu chấp hành
+
+* Driver ULN2003.
+* Động cơ bước 28BYJ-48.
+* Mô phỏng đóng ngắt Aptomat cơ học.
+
+---
+
+# 🔄 Quy trình hoạt động
+
+1. Cảm biến ACS712 đo dòng điện chạy qua hệ thống phụ tải tòa nhà.
+
+2. ESP8266 lấy mẫu tín hiệu hình sin và tính toán công suất thực tế ($P = U \times I$).
+
+3. Nếu công suất vượt ngưỡng giới hạn an toàn (>150W):
+
+* ESP8266 lập tức kích hoạt Driver ULN2003 điều khiển động cơ bước quay một góc $90^\circ$ để ngắt tải phụ.
+* Đồng thời kết nối cổng SSL 465 gửi Email cảnh báo thông số sự cố về hòm thư ban quản lý.
+
+4. Trình duyệt Web Dashboard liên tục bắt gói tin JSON chứa thông số từ cổng API của ESP8266.
+
+5. Thư viện Web3.js tích hợp trên giao diện bắt lấy dữ liệu sự cố, đóng gói và mã hóa thông tin sang mã Hex.
+
+6. Người dùng thực hiện ký số giao dịch bằng Khóa bí mật (Private Key).
+
+7. Giao dịch được đẩy lên cổng RPC Server của mạng Ganache.
+
+8. Mạng Blockchain thực hiện đồng thuận, đóng gói dữ liệu vào Khối (Block) mới bất biến.
+
+9. Giao diện Web Dashboard nhận mã băm định danh (TxHash) và cập nhật trực tiếp lên bảng nhật ký hệ thống.
+
+10. Khi người dùng bấm F5 (tải lại trang), tập lệnh JS tự động quét ngược chuỗi khối để khôi phục lịch sử hiển thị.
+
+---
+
+# ⛓️ Tích hợp Blockchain
+
+Luồng Blockchain:
