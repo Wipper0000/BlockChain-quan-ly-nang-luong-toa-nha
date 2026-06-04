@@ -1,20 +1,18 @@
+
 <h2 align="center">
     <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
     🎓 Faculty of Information Technology (DaiNam University)
     </a>
 </h2>
-
 <h2 align="center">
-LƯU TRỮ LỊCH SỬ PHÂN LOẠI SẢN PHẨM BẰNG BLOCKCHAIN
+   TRUYỀN FILE QUA GIAO THỨC TCP
 </h2>
-
 <div align="center">
-
-<p align="center">
-<img src="./aiotlab_logo.png" width="170"/>
-<img src="./fitdnu_logo.png" width="180"/>
-<img src="./dnu_logo.png" width="200"/>
-</p>
+    <p align="center">
+        <img src="docs/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
+        <img src="docs/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
+        <img src="docs/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+    </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
 [![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
@@ -22,394 +20,125 @@ LƯU TRỮ LỊCH SỬ PHÂN LOẠI SẢN PHẨM BẰNG BLOCKCHAIN
 
 </div>
 
----
+## 📖 1. Giới thiệu
+Trong thời đại công nghệ thông tin phát triển mạnh mẽ, nhu cầu trao đổi và chia sẻ dữ liệu giữa các máy tính ngày càng phổ biến. Một trong những phương thức quan trọng và được sử dụng rộng rãi là truyền file qua giao thức TCP (Transmission Control Protocol).
 
-## 📌 Poster dự án
+TCP là giao thức hướng kết nối, đảm bảo tính tin cậy, toàn vẹn và đúng thứ tự dữ liệu trong quá trình truyền. Nhờ đó, việc truyền file qua TCP có thể áp dụng cho nhiều hệ thống thực tế như: dịch vụ FTP, ứng dụng chat, hệ thống lưu trữ dữ liệu phân tán, hay các phần mềm hỗ trợ tải xuống.
 
-<div align="center">
-<img src="./Poster_Blockchain.JPG" width="850"/>
-</div>
+🔑 **Các chức năng chính của hệ thống**:
 
----
+-Kết nối Client – Server qua TCP Socket.
 
-# 📖 Giới thiệu đề tài
+-Truyền và nhận file giữa các client.
 
-**Lưu trữ lịch sử phân loại sản phẩm bằng Blockchain** là hệ thống kết hợp giữa **Thị giác máy tính (Computer Vision)**, **Trí tuệ nhân tạo (AI)** và **Blockchain Ethereum** nhằm xây dựng một nền tảng giám sát và truy xuất nguồn gốc dữ liệu phân loại sản phẩm một cách minh bạch và bất biến.
+-Hiển thị tiến trình truyền và nhận file .
 
-Hệ thống sử dụng camera để thu nhận hình ảnh sản phẩm, áp dụng mô hình YOLOv8 kết hợp OpenCV để phát hiện vật thể và nhận diện màu sắc. Sau khi phân tích, dữ liệu sẽ được lưu đồng thời vào SQLite và Smart Contract trên Blockchain thông qua Web3.py.
+-Lưu file tự động vào thư mục chỉ định.
 
-🎯 **Mục tiêu của hệ thống**
+## 🛠️ 2. Công nghệ sử dụng
 
-* Tự động nhận diện và phân loại sản phẩm theo màu sắc.
-* Hỗ trợ cánh tay robot Arduino thực hiện gắp và phân loại.
-* Lưu trữ nhật ký phân loại lên Blockchain Ethereum cục bộ.
-* Đảm bảo dữ liệu không thể chỉnh sửa hoặc giả mạo.
-* Hỗ trợ truy xuất lịch sử phân loại và thống kê trực quan.
+**Ngôn ngữ lập trình**: Java
 
----
+**Giao thức**: TCP,TCP Socket
 
-# ⚙️ Tính năng nổi bật
+**Công nghệ giao diện**: Java Swing
 
-* 📷 Realtime Webcam Stream.
-* 🎯 Phát hiện vật thể bằng YOLOv8 hoặc Custom Model.
-* 🎨 Nhận diện 5 màu mục tiêu:
+**Thư viện**:
 
-  * Đỏ
-  * Xanh lá
-  * Xanh dương
-  * Vàng
-  * Cam
-* 🧠 Phân tích màu bằng HSV Threshold và OpenCV.
-* 🚫 Loại bỏ màu nền và các màu không mong muốn.
-* 📊 Dashboard realtime với Chart.js.
-* 🗂️ Lưu lịch sử SQLite.
-* 📄 Export dữ liệu CSV.
-* 🔊 Voice Alert khi phát hiện sai màu.
-* ⛓️ Ghi dữ liệu lên Local Blockchain Ganache/Ethereum.
-* 🤖 Hỗ trợ điều khiển cánh tay robot Arduino Nano.
+-java.net 
 
----
+-java.io 
 
-# 🖥️ Kiến trúc hệ thống
+**Công cụ phát triển**: Eclipse IDE
 
-## 🎨 Giao diện người dùng (UI)
+**Hệ điều hành**: Windows 11
 
-* Dashboard Dark Mode.
-* Glassmorphism Design.
-* Hiển thị webcam realtime.
-* Hiển thị Bounding Box.
-* Biểu đồ thống kê màu sắc.
-* Trạng thái Blockchain.
+**JDK**: Java SE
 
-## 🧠 Module xử lý AI
 
-* YOLOv8 Object Detection.
-* OpenCV Image Processing.
-* HSV Color Detection.
-* Center Crop Analysis.
-* Morphology Noise Removal.
-* RGB & HSV Extraction.
+## 🚀 3. Hình ảnh các chức năng
 
-## 🗄️ Module lưu trữ
-
-* SQLite Database.
-* CSV Export.
-* Blockchain Ledger.
-
-## 🤖 Module Robot
-
-* Arduino Nano.
-* Servo SG90.
-* Điều khiển Pick & Place.
-* Giao tiếp Serial COM.
-
----
-
-# 🔄 Quy trình hoạt động
-
-1. Camera thu nhận hình ảnh sản phẩm.
-
-2. YOLOv8 phát hiện vật thể.
-
-3. Crop vùng trung tâm của Bounding Box.
-
-4. Chuyển đổi ảnh sang không gian màu HSV.
-
-5. Tính toán tỷ lệ màu hợp lệ.
-
-6. Xác định màu có tỷ lệ lớn nhất.
-
-7. So sánh với màu chuẩn.
-
-8. Sinh kết quả:
-
-* OK
-* NG
-* Ignored
-
-9. Lưu dữ liệu vào SQLite.
-
-10. Gửi Transaction qua Web3.py.
-
-11. Smart Contract ghi dữ liệu lên Blockchain.
-
-12. Dashboard cập nhật trạng thái và Tx Hash.
-
----
-
-# ⛓️ Tích hợp Blockchain
-
-Luồng Blockchain:
-
-```
-Camera
-   ↓
-YOLO + OpenCV
-   ↓
-Color Detection
-   ↓
-SQLite Database
-   ↓
-Web3.py
-   ↓
-Ganache Ethereum
-   ↓
-Smart Contract
-   ↓
-Blockchain Ledger
-```
-
-Thông tin lưu trữ:
-
-* Product ID
-* Object Name
-* Detected Color
-* RGB Value
-* HSV Value
-* Result (OK / NG)
-* Confidence
-* Timestamp
-* Result Hash
-
----
-
-# 📂 Cấu trúc Project
-
-```text
-.
-├── app.py
-├── config.py
-├── requirements.txt
-├── README.md
-├── models/
-├── detection/
-├── analytics/
-├── database/
-├── blockchain/
-│   ├── contracts/
-│   ├── abi/
-│   └── scripts/
-├── templates/
-├── static/
-├── uploads/
-├── outputs/
-├── exports/
-└── reports/
-```
-
----
-
-# 🔧 Công nghệ sử dụng
-
-## Ngôn ngữ lập trình
-
-* Python
-* Solidity
-
-## Thư viện
-
-* OpenCV
-* Ultralytics YOLOv8
-* NumPy
-* Flask
-* Web3.py
-* SQLite3
-* Chart.js
-
-## Công cụ phát triển
-
-* Visual Studio Code
-* Git & GitHub
-* Ganache
-* Remix IDE
-
-## Phần cứng
-
-* Webcam
-* Arduino Nano
-* Servo SG90
-* Cánh tay Robot
-
-## Hệ điều hành
-
-* Windows 10
-* Windows 11
-
----
-
-# 🚀 Hướng dẫn cài đặt
-
-### Clone Project
-
-```bash
-git clone https://github.com/TruongDev10/Blockchain-Product-Classification.git
-```
-
-### Di chuyển vào thư mục
-
-```bash
-cd Blockchain-Product-Classification
-```
-
-### Tạo môi trường ảo
-
-```bash
-python -m venv .venv
-```
-
-### Kích hoạt
-
-Windows
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux / Mac
-
-```bash
-source .venv/bin/activate
-```
-
-### Cài đặt thư viện
-
-```bash
-pip install -r requirements.txt
-```
-
-### Khởi tạo Database
-
-```bash
-python database/init_db.py
-```
-
-### Chạy hệ thống
-
-```bash
-python app.py
-```
-
-Mở trình duyệt:
-
-```text
-http://127.0.0.1:5000
-```
-
----
-
-# 🔗 Kết nối Blockchain
-
-### Chạy Ganache
-
-RPC:
-
-```text
-http://127.0.0.1:7545
-```
-
-Chain ID:
-
-```text
-1337
-```
-
-### Deploy Smart Contract
-
-```bash
-python blockchain/scripts/deploy_contract.py
-```
-
-Sau khi deploy thành công:
-
-```text
-Contract deployed
-Address : 0x...
-Tx Hash : 0x...
-```
-
-Nhập Contract Address vào Dashboard và nhấn:
-
-**Kết nối Blockchain**
-
----
-
-# 🤖 Điều khiển Robot thật
-
-Nạp Sketch Arduino:
-
-```text
-arduino/robot_arm_camera_pick/robot_arm_camera_pick.ino
-```
-
-Khởi động:
-
-```powershell
-$env:ROBOT_SERIAL_ENABLED="1"
-$env:ROBOT_SERIAL_PORT="COM3"
-$env:ROBOT_SERIAL_BAUDRATE="9600"
-
-python run_server.py
-```
-
-Lệnh gửi tới Arduino:
-
-```text
-PICK <x> <y> <color> <status>
-```
-
-Ví dụ:
-
-```text
-PICK 150 110 red valid
-```
-
----
-
-# 📷 Hình ảnh minh họa
 
 <p align="center">
-<img src="./giao diện.jpg" width="700"/>
+  <img src="docs/Ảnh 1.png" alt="Ảnh 1" width="500"/>
+</p>
+<p align="center">
+  <em>Hình 1: Giao diện nhập tên user </em>
 </p>
 
-<p align="center">
-<em>Giao diện Dashboard</em>
-</p>
 
 <p align="center">
-<img src="./kết nối Block.jpg" width="700"/>
+  <img src="docs/Ảnh 3.png" alt="Ảnh 3" width="500"/>
+</p>
+<p align="center">
+  <em>Hình 2: Giao diện chọn file để gửi </em>
 </p>
 
-<p align="center">
-<em>Kết nối Blockchain</em>
-</p>
 
 <p align="center">
-<img src="./assets/images/robot.png" width="700"/>
+  <img src="docs/Ảnh 4.png" alt="Ảnh 4" width="500"/>
+</p>
+<p align="center">
+  <em>Hình 3: Giao diện Client sau khi chọn  </em>
 </p>
 
+
 <p align="center">
-<em>Cánh tay Robot phân loại</em>
+  <img src="docs/Ảnh 5.png" alt="Ảnh 5" width="500"/>
 </p>
+<p align="center">
+  <em>Hình 4: Giao diện Khi File gửi thành công  </em>
+</p>
+
+
+<p align="center">
+  <img src="docs/Ảnh 6.png" alt="Ảnh 6" width="500"/>
+</p>
+<p align="center">
+  <em>Hình 5: Giao diện Client user khác truy cập server sau khi user 1 chuyển file</em>
+</p>
+
+## 📝 4. Các bước cài đặt
+
+#### Bước 1: Chuẩn bị môi trường
+1. **Kiểm tra Java**: Mở terminal/command prompt và chạy:
+   ```bash
+   java -version
+   javac -version
+   ```
+   Đảm bảo cả hai lệnh đều hiển thị phiên bản Java 8 trở lên.
+
+2. **Tải mã nguồn**: Sao chép thư mục `Truyen-file-qua-tcp` chứa các file:
+   - `FileServer.java`
+   - `ChatClient.java`
+
+#### Bước 2: Biên dịch mã nguồn
+1.Chạy server:
+```bash
+java component.FileServer
+```
+
+2.Chạy Client:
+```bash
+java component.ChatClient
+```
+<p></p>
+
+### 🚀 Sử dụng ứng dụng
+
+1. **Kết nối server**: chạy Server.java để lắng nghe trên port (ví dụ 5001).
+2. **Kết nối Client**: chạy Client.java và nhập IP, port server để kết nối.
+3. **Chọn File**: client chọn file cần gửi từ máy tính.
+4. **Gửi File**: client gửi file qua socket TCP tới server.
+5. **Nhận File**: server nhận dữ liệu và ghi file vào thư mục đích.
+6. **Lưu File**: file được lưu tự động trong thư mục mặc định của server.
+7. **Ngắt kết nối**:client thoát ứng dụng hoặc nhấn Ctrl+C để dừng.
+
+## 👤 5. Liên hệ
+**Họ tên**: Lê Ngọc Hưng.  
+**Lớp**: CNTT 16-01.  
+**Email**: Hungtit0601@gmail.com.
+
+© 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
 ---
-
-# 👨‍💻 Người thực hiện
-
-* **Bùi Văn Trường**
-
-* Chuyên ngành: Công nghệ Thông tin
-
-* Trường Đại học Đại Nam
-
-* GitHub:
-  https://github.com/TruongDev10
-
----
-
-<div align="center">
-
-### © 2026 - Faculty of Information Technology - DaiNam University
-
-### AI • Computer Vision • Blockchain • Arduino • IoT
-
-</div>
