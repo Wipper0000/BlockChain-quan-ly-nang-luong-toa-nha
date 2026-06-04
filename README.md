@@ -129,3 +129,83 @@ Hệ thống sử dụng cảm biến dòng điện để thu thập thông số
 # ⛓️ Tích hợp Blockchain
 
 Luồng Blockchain:
+```
+Cảm biến (ACS712)
+↓
+Vi điều khiển (ESP8266)
+↓
+Cổng API cục bộ (JSON)
+↓
+Trình duyệt Web (Dashboard)
+↓
+Thư viện Web3.js (Mã hóa Hex & Ký số)
+↓
+RPC Server (Cổng 7545)
+↓
+Mạng Ethereum Local (Ganache)
+↓
+Đóng gói Khối (Blockchain Ledger)
+```
+Thông tin lưu trữ trên Block:
+
+* Device ID (Định danh thiết bị IoT)
+* Current Value (Giá trị dòng điện đo được)
+* Power Peak (Công suất đỉnh tại thời điểm sự cố)
+* Event Type (Loại sự cố: Quá tải / Sa thải tải)
+* Timestamp (Thời gian hệ thống ghi nhận khối)
+* Signer Address (Địa chỉ ví thực hiện ký số)
+* TxHash (Mã băm định danh giao dịch độc bản)
+
+---
+
+# 📂 Cấu trúc Project
+
+```text
+.
+├── SmartCityEnergyESP8266/
+│   ├── SmartCityEnergyESP8266.ino   # Mã nguồn C++ xử lý phần cứng, API và SMTP Email
+│   └── index.h                      # Giao diện Web Dashboard (HTML/CSS/JS) tích hợp Web3.js
+└── README.md                        # Tài liệu hướng dẫn hệ thống
+```
+# 🔧 Công nghệ sử dụng
+
+## Ngôn ngữ lập trình
+
+* C++ (Arduino)
+*JavaScript (ES6+)
+*HTML5 / CSS3
+
+## Thư viện
+
+* Web3.js (v1.8.1)
+* ESP_Mail_Client
+* Chart.js
+* Bootstrap 5 (Responsive Layout)
+
+## Công cụ phát triển
+
+* Visual Studio Code
+* Git & GitHub
+* Ganache
+* Arduino IDE
+
+## Phần cứng
+
+* NodeMCU ESP8266 (Chip Wi-Fi SoC)
+* Cảm biến dòng điện ACS712 (Dải đo 5A/20A/30A)
+* Động cơ bước 28BYJ-48 & Driver ULN2003
+* Phụ tải kiểm thử (Bóng đèn sợi đốt/Điện trở công suất)
+
+## Hệ điều hành
+
+* Windows 10/11
+* Linux / macOS
+
+---
+
+# 🚀 Hướng dẫn cài đặt
+
+### Clone Project
+
+```bash
+git clone [https://github.com/TruongDev10/Smart-City-Energy-Blockchain.git](https://github.com/TruongDev10/Smart-City-Energy-Blockchain.git)
