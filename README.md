@@ -208,4 +208,86 @@ Thông tin lưu trữ trên Block:
 ### Clone Project
 
 ```bash
-git clone [https://github.com/TruongDev10/Smart-City-Energy-Blockchain.git](https://github.com/TruongDev10/Smart-City-Energy-Blockchain.git)
+git clone [https://github.com/Wipper0000/BlockChain-quan-ly-nang-luong-toa-nha.git]
+```
+### Di chuyển vào file gốc
+```bash 
+cd Smart-City-Energy-Blockchain
+```
+Thiết lập môi trường Arduino IDE:
+-Cài đặt Driver giao tiếp cho vi điều khiển (CH340 hoặc CP210x).
+
+-Thêm URL quản lý bo mạch ESP8266 và tải gói thư viện phần cứng thông qua Boards Manager.
+
+-Cài đặt thư viện mở rộng: ESP Mail Client từ trình quản lý Library Manager.
+
+-Cấu hình thông số nạp code
+
+-Mở file SmartCityEnergyESP8266.ino và tinh chỉnh cấu hình kết nối:
+
+```bash
+const char* ssid = "TÊN_WIFI_CỦA_BẠN";
+const char* password = "MẬT_KHẨU_WIFI_CỦA_BẠN";
+
+#define AUTHOR_EMAIL "email_gui_cua_ban@gmail.com"
+#define RECIPIENT_EMAIL "email_nhan_cua_ban@gmail.com"
+#define AUTHOR_PASSWORD "xxxx yyyy zzzz kkkk" // Mật khẩu ứng dụng Google (16 ký tự)
+```
+Nạp chương trình vào mạch:
+1.Kết nối mạch ESP8266 với máy tính bằng cáp truyền dữ liệu chất lượng cao.
+
+2.Chọn đúng cổng COM kết nối tại mục Tools -> Port.
+
+3.Chọn loại bo mạch NodeMCU 1.0 (ESP-12E Module) và bấm Upload.
+
+4.Khởi chạy màn hình Serial Monitor (Baudrate 115200) để nhận địa chỉ IP của thiết bị.
+
+🔗 Kết nối Blockchain
+Khởi chạy Ganache Local Blockchain
+<img src="Screenshot 2026-06-05 041328.png" width="850"/>
+Khởi động phần mềm Ganache trên máy tính và thiết lập cấu hình mạng:
+
+RPC Server Endpoint:
+```bash
+[http://127.0.0.1:7545](http://127.0.0.1:7545)
+```
+
+```bash
+5777 / 1337
+```
+
+Đồng bộ hóa và Vận hành:
+
+*Sử dụng máy tính hoặc điện thoại thông minh kết nối cùng mạng bộ phát WiFi đã cấu hình cho mạch IoT.
+
+*Nhập địa chỉ IP hiển thị trên màn hình Serial Monitor vào thanh địa chỉ của trình duyệt Web (Ví dụ: http://192.168.1.50).
+
+*Dashboard giám sát sẽ tự động mở ra. Lúc này, hệ thống sẽ thực hiện bắt tay (Handshake) với RPC Server của Ganache thông qua Web3.js để đồng bộ hóa trạng thái chuỗi khối.
+
+🤖 Quy trình kiểm thử phần cứng:
+
+1. Trạng thái vận hành tĩnhKhi phụ tải hoạt động dưới ngưỡng giới hạn cho phép, đồ thị Chart.js vẽ bước sóng công suất ổn định dạng Real-time.Hệ thống hiển thị nhãn trạng thái màu xanh: HỆ THỐNG AN TOÀN.
+   
+2. Kịch bản mô phỏng quá tải điện năng:
+
+   -Đưa dòng tải cao đi qua cảm biến dòng điện ACS712 nhằm ép mức công suất tính toán vọt lên vượt mốc 150W.
+   
+   -Phản hồi từ hệ thống:
+   
+     +Chip ESP8266 phát tín hiệu số dạng xung nhịp điều khiển động cơ mô phỏng thao tác dập gạt Aptomat cơ khí bảo vệ dòng.
+   
+     +Email định dạng nội dung HTML thông số lỗi được bắn trực tiếp về hòm thư người quản trị qua cổng SSL 465.Web3.js thực thi lệnh tạo giao dịch tự động, trích      ví và ký số, đẩy một Block sự cố mới lên nền tảng Ganache.
+   
+     +Trên Web Dashboard xuất hiện thêm một hàng mã giao dịch TxHash duy nhất trong bảng nhật ký. Khi trạng thái được reload (F5), bảng dữ liệu này sẽ quét ngược      cấu trúc Block từ Ganache về để tái tạo dữ liệu hiển thị, bảo đảm thông tin lịch sử an toàn tuyệt đối.
+
+👨‍💻 Người thực hiện
+Lê Ngọc 
+
+Chuyên ngành: Công nghệ Thông tin
+
+Trường Đại học Đại Nam
+
+GitHub:
+https://github.com/Wipper0000
+
+© 2026 - Faculty of Information Technology - DaiNam University
