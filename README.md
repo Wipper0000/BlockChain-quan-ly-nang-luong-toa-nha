@@ -27,7 +27,7 @@ GIÁM SÁT NĂNG LƯỢNG VÀ SA THẢI PHỤ TẢI TOÀ NHÀ THÔNG MINH BẰNG
 ## 📌 Poster dự án
 
 <div align="center">
-<img src="Screenshot 2026-06-05 041328.png" width="850"/>
+<img src="Poster blockchain.png" width="850"/>
 </div>
 
 ---
